@@ -12,19 +12,8 @@ def get_guess():
         if len(guess) == 3:
             return guess
         else:
-            print("You're a fucking idiot.")
+            print("ERROR! ERROR! ERROR! Oh god what have you done?!")
         
-# def check_guess(guess):
-#     count = 0
-#     for i in guess:
-#         if type(i) != int:
-#             count += 1
-#     if count != 0:
-#         print(count)
-#         return False
-#     else:
-#         print(count)
-#         return True
 
 def generate_clues(secret_code, guess):
     if guess == secret_code:
@@ -43,11 +32,16 @@ def generate_clues(secret_code, guess):
         return clues
     else:
         return clues
-
+print("")
 print("Welcome to Code Breaker!")
+print("To crack the code, you'll be attempting to guess a 3 digit code")
+print("If any of the numbers match the exact spot it is at you'll get a 'Match!'")
+print("If any of the numbers are in the code but in the wrong spot, it will return 'Close!'")
+print("Please, do not input anything other than 3 digit code attempts..")
+print("")
 
 secret_code = get_code()
-print("Generated code, please guess a 3 digit code", secret_code)
+print("Generated code, please guess a 3 digit code")
 
 clueReports = []
 
